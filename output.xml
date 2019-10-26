@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20191026 23:03:15.839" generator="Robot 3.0.4 (Python 2.7.10 on darwin)">
+<suite source="/Users/zorica/Desktop/humanity/new_message.robot" id="s1" name="New Message">
+<test id="s1-t1" name="TC1 - LogIn on humanity web site">
+<kw name="Given I am on humanity web site" library="new_message_resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.humanity.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20191026 23:03:15.999" level="INFO">Opening browser 'chrome' to base url 'https://www.humanity.com/'.</msg>
+<status status="PASS" endtime="20191026 23:03:24.182" starttime="20191026 23:03:15.998"></status>
+</kw>
+<status status="PASS" endtime="20191026 23:03:24.182" starttime="20191026 23:03:15.998"></status>
+</kw>
+<kw name="When I click on Login" library="new_message_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@onclick="loginApp()"]</arg>
+</arguments>
+<msg timestamp="20191026 23:03:24.183" level="INFO">Clicking element '//*[@onclick="loginApp()"]'.</msg>
+<status status="PASS" endtime="20191026 23:03:27.221" starttime="20191026 23:03:24.183"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@name="username"]</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20191026 23:03:32.778" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191026 23:03:32.778" starttime="20191026 23:03:32.314"></status>
+</kw>
+<msg timestamp="20191026 23:03:32.783" level="FAIL">Element '//*[@name="username"]' not visible after 5 seconds.</msg>
+<status status="FAIL" endtime="20191026 23:03:32.783" starttime="20191026 23:03:27.221"></status>
+</kw>
+<status status="FAIL" endtime="20191026 23:03:32.784" starttime="20191026 23:03:24.183"></status>
+</kw>
+<status status="FAIL" endtime="20191026 23:03:32.784" critical="yes" starttime="20191026 23:03:15.997">Element '//*[@name="username"]' not visible after 5 seconds.</status>
+</test>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20191026 23:03:32.891" starttime="20191026 23:03:32.785"></status>
+</kw>
+<status status="FAIL" endtime="20191026 23:03:32.891" starttime="20191026 23:03:15.846"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="New Message" pass="0">New Message</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
